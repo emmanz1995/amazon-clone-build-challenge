@@ -7,7 +7,7 @@ const MAX_RATING = 5;
 const MIN_RATING = 1;
 
 export default function Product({ id, title, price, description, category, image }) {
-    const [rating] = useState(Math.floor(Math.random() * (MAX_RATING + 1)) + MIN_RATING)
+    const [rating] = useState(Math.floor(Math.random() * (MAX_RATING + 1)) + MIN_RATING);
     const [hasPrime] = useState(Math.random()< 0.5);
     return (
         <div className="relative flex flex-col m-5 bg-white z-30 p-10">
@@ -25,7 +25,7 @@ export default function Product({ id, title, price, description, category, image
             </div>
             {hasPrime && (
                 <div className="flex items-center space-x-2 mt-5">
-                    <img className="w-12" src="https://links.papareact.com/fdw" alt=""/>
+                    <img className="w-12" src="https://links.papareact.com/fdw" alt="" />
                     <p className="text-xs text-gray-500">FREE Next-day Delivery</p>
                 </div>
             )}
